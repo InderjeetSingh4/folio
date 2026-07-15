@@ -19,7 +19,7 @@ If you use parts of the code, you must provide proper credit linking back to the
 
 Build your own version — don’t just copy.
 
-— Moncy Yohannan
+— Inderjeet Singh
 
 ---
 
@@ -53,8 +53,8 @@ Any usage, extraction, or redistribution of that avatar from my live website is 
 
 ---
 
-## Protfolio-Preview
-<img width="1708" height="900" alt="Screenshot 2026-07-15 at 17 46 52" src="https://github.com/user-attachments/assets/6124ca97-5b65-4c06-a368-4b9f614fe2e2" />
+## Portfolio-Preview
+<img width="1708" height="900" alt="Screenshot 2026-07-15" src="https://github.com/user-attachments/assets/6124ca97-5b65-4c06-a368-4b9f614fe2e2" />
 
 ---
 
