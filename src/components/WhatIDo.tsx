@@ -87,24 +87,23 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
+              <h3>SOFTWARE DEVELOPMENT</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Building responsive websites, modern web applications, and full-stack engineering platforms with a focus on intuitive navigation and mobile-friendly layouts.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">HTML5</div>
+                <div className="what-tags">CSS3</div>
+                <div className="what-tags">React.js</div>
+                <div className="what-tags">Tailwind CSS</div>
+                <div className="what-tags">Bootstrap</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Supabase</div>
+                <div className="what-tags">Git & GitHub</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +127,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
+              <h3>DATA & AI</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Developing Python and SQL data pipelines, forecasting models, and interactive analytics dashboards to transform complex datasets into actionable insights.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">SQL</div>
+                <div className="what-tags">Pandas & NumPy</div>
+                <div className="what-tags">Scikit-learn</div>
+                <div className="what-tags">Machine Learning</div>
+                <div className="what-tags">OpenCV</div>
+                <div className="what-tags">Tableau</div>
+                <div className="what-tags">Power BI</div>
+                <div className="what-tags">Streamlit</div>
               </div>
               <div className="what-arrow"></div>
             </div>

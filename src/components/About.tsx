@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I am a Frontend Developer, Data Analyst, and Artificial Intelligence & Data Science undergraduate. I have hands-on experience building responsive websites, modern web applications, Python/SQL data pipelines, and forecasting models. I specialize in transforming complex, messy datasets into actionable dashboards and building user-centric digital solutions using modern UI frameworks and AI-assisted workflows.
         </p>
       </div>
     </div>
