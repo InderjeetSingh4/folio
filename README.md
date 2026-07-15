@@ -1,3 +1,4 @@
+<img width="1708" height="900" alt="Screenshot 2026-07-15 at 17 46 52" src="https://github.com/user-attachments/assets/6124ca97-5b65-4c06-a368-4b9f614fe2e2" />
 # My Portfolio Website - Overview 🚀
 
 This repository contains the open-source version of my personal portfolio website.  
@@ -53,7 +54,7 @@ Any usage, extraction, or redistribution of that avatar from my live website is 
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+![Protfolio-Preview](https://github.com/user-attachments/assets/<img width="1708" height="900" alt="Screenshot 2026-07-15 at 17 46 52" src="https://github.com/user-attachments/assets/6124ca97-5b65-4c06-a368-4b9f614fe2e2" />)
 
 ---
 
