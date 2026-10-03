@@ -87,23 +87,18 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>SOFTWARE DEVELOPMENT</h3>
+              <h3>WEB DEVELOPMENT</h3>
               <h4>Description</h4>
               <p>
                 Building responsive websites, modern web applications, and full-stack engineering platforms with a focus on intuitive navigation and mobile-friendly layouts.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Tailwind CSS</div>
-                <div className="what-tags">Bootstrap</div>
-                <div className="what-tags">MySQL</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">Supabase</div>
-                <div className="what-tags">Git & GitHub</div>
+                {["JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "Express.js", "MySQL", "PostgreSQL", "Supabase", "Git & GitHub"].map((tag, i) => (
+                  <div className="what-tags" key={tag} style={{ "--tag-i": i } as React.CSSProperties}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -134,15 +129,11 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Python</div>
-                <div className="what-tags">SQL</div>
-                <div className="what-tags">Pandas & NumPy</div>
-                <div className="what-tags">Scikit-learn</div>
-                <div className="what-tags">Machine Learning</div>
-                <div className="what-tags">OpenCV</div>
-                <div className="what-tags">Tableau</div>
-                <div className="what-tags">Power BI</div>
-                <div className="what-tags">Streamlit</div>
+                {["Python", "SQL", "Pandas & NumPy", "Scikit-learn", "Machine Learning", "OpenCV", "Tableau", "Power BI", "Streamlit"].map((tag, i) => (
+                  <div className="what-tags" key={tag} style={{ "--tag-i": i } as React.CSSProperties}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="what-arrow"></div>
             </div>

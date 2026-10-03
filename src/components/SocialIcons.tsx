@@ -1,79 +1,80 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import HoverLinks from "./HoverLinks";
 
+import { gsap } from "gsap";
+
 const SocialIcons = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
+    if (!social) return;
 
-    social.querySelectorAll("span").forEach((item) => {
+    const spans = social.querySelectorAll("span");
+    const cleanupFns: Array<() => void> = [];
+
+    spans.forEach((item) => {
       const elem = item as HTMLElement;
-      const link = elem.querySelector("a") as HTMLElement;
-
-      const rect = elem.getBoundingClientRect();
-      let mouseX = rect.width / 2;
-      let mouseY = rect.height / 2;
-      let currentX = 0;
-      let currentY = 0;
-
-      const updatePosition = () => {
-        currentX += (mouseX - currentX) * 0.1;
-        currentY += (mouseY - currentY) * 0.1;
-
-        link.style.setProperty("--siLeft", `${currentX}px`);
-        link.style.setProperty("--siTop", `${currentY}px`);
-
-        requestAnimationFrame(updatePosition);
-      };
 
       const onMouseMove = (e: MouseEvent) => {
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const rect = elem.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const distanceX = e.clientX - centerX;
+        const distanceY = e.clientY - centerY;
+        const dist = Math.hypot(distanceX, distanceY);
 
-        if (x < 40 && x > 10 && y < 40 && y > 5) {
-          mouseX = x;
-          mouseY = y;
+        if (dist < 80) {
+          gsap.to(elem, {
+            x: distanceX * 0.35,
+            y: distanceY * 0.35,
+            duration: 0.3,
+            ease: "power2.out",
+          });
         } else {
-          mouseX = rect.width / 2;
-          mouseY = rect.height / 2;
+          gsap.to(elem, {
+            x: 0,
+            y: 0,
+            duration: 0.5,
+            ease: "elastic.out(1, 0.4)",
+          });
         }
       };
 
-      document.addEventListener("mousemove", onMouseMove);
-
-      updatePosition();
-
-      return () => {
-        elem.removeEventListener("mousemove", onMouseMove);
-      };
+      window.addEventListener("mousemove", onMouseMove);
+      cleanupFns.push(() => window.removeEventListener("mousemove", onMouseMove));
     });
+
+    return () => {
+      cleanupFns.forEach((fn) => fn());
+    };
   }, []);
 
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/InderjeetSingh4" target="_blank">
+          <a
+            href="https://github.com/InderjeetSingh4"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/inderjeetsingh4" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/inderjeetsingh4"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
             <FaLinkedinIn />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com/iinderjeett/" target="_blank">
-            <FaInstagram />
           </a>
         </span>
       </div>

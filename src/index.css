@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: "Geist", sans-serif;
 
@@ -94,23 +98,102 @@ body {
 .techstack {
   width: 100%;
   position: relative;
-  height: var(--vh);
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: -100px;
+  height: auto;
+  min-height: auto;
+  margin: 100px auto 60px auto;
+  padding: 60px 0;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
-  z-index: 10;
+  z-index: auto;
+}
+
+.techstack-container {
+  max-width: var(--cMaxWidth);
+  width: var(--cWidth);
+  margin: 0 auto;
 }
 
 .techstack h2 {
-  font-size: 80px;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 120px;
-  left: 0;
-  font-weight: 400;
+  font-size: calc(3vw + 24px);
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  text-align: left;
+}
+
+.techstack-subtitle {
+  font-size: 15px;
+  color: #a0a0a0;
+  margin-bottom: 40px;
+  font-weight: 300;
+  max-width: 650px;
+  line-height: 22px;
+}
+
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.tech-category-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-category-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.tech-category-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--accentColor, #df4424);
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+}
+
+.tech-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-pill-tag {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #eae5ec;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: default;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-pill-tag:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -118,8 +201,16 @@ body {
     --cWidth: 94%;
   }
 }
-@media screen and (max-width: 900px) {
-  .techstack h2 {
-    font-size: 40px;
-  }
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -4,7 +4,6 @@
   width: var(--cWidth);
   justify-content: space-between;
   padding: 20px 0px;
-  margin-bottom: -100px;
   box-sizing: border-box;
   position: fixed;
   left: 50%;
@@ -39,11 +38,38 @@
   font-size: 15px;
   letter-spacing: 1px;
   font-weight: 500;
+  color: #a0a0a0;
+  transition: color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.navbar-connect:hover {
+  color: #ffffff;
 }
 .navbar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.navbar-title:hover {
+  opacity: 0.85;
+}
+.navbar-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accentColor, #6366f1);
+}
+.navbar-logo-text {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.logo-dot {
+  color: var(--accentColor, #6366f1);
 }
 @media only screen and (min-width: 500px) {
   .header {
